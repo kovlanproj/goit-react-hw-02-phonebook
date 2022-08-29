@@ -1,10 +1,10 @@
+import { Contact } from './Contact';
+
 export const ContactsList = ({ contacts }) => {
   return (
     <ul>
-      {contacts.map(({ id, name, number }) => (
-        <li key={id}>
-          {name}: {number}
-        </li>
+      {contacts.map(contact => (
+        <Contact contact={contact} key={contact.id} />
       ))}
     </ul>
   );
