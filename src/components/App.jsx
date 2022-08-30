@@ -37,6 +37,12 @@ export class App extends Component {
     this.setState({ filter: e.currentTarget.value });
   };
 
+  clearFilter = () => {
+    this.setState({
+      filter: this.setState({ filter: '' }),
+    });
+  };
+
   getFilteredContacts = () => {
     const { filter, contacts } = this.state;
     const normalizedFilter = filter.toLowerCase();
