@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Label } from './ContactForm.styled.js';
+import { Label, Form, AddButton } from './ContactForm.styled.js';
 
 export class ContactForm extends Component {
   state = {
@@ -23,7 +23,7 @@ export class ContactForm extends Component {
   render() {
     const { name, number } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit}>
         <Label>
           Name
           <input
@@ -48,8 +48,8 @@ export class ContactForm extends Component {
             onChange={this.handleChange}
           />
         </Label>
-        <button type="submit">Add contact</button>
-      </form>
+        <AddButton type="submit">Add contact</AddButton>
+      </Form>
     );
   }
 }
